@@ -1,3 +1,12 @@
 .left {
 	text-align: left;
 }
+
+#map_canvas {
+    position: absolute; 
+    width:100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0;   
+    z-index: -1
+}
