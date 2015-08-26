@@ -10,3 +10,21 @@
     padding: 0;   
     z-index: -1
 }
+
+.search-input-map{
+    width:60%;
+    z-index:1;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.par-search{
+    margin-top:10%
+}
+
+.btnmax{
+  z-index:1;
+  margin-left:500px;
+  margin-top:300px;
+
+}

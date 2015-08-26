@@ -1,4 +1,4 @@
-<ons-page>
+<ons-page ng-controller="MapController">
       <ons-toolbar>
         <div class="left">
           <ons-toolbar-button ng-click="menu.toggle()">
@@ -12,9 +12,13 @@
     <div id="map_canvas"></div>
 
 
-    <p>cjkdhkisahdihadiuhsdihdkhk</p>
-
-
-
-  
+     <p class="par-search">
+            <input type="search" id="search" class="search-input search-input-map">
+        </p>
+      
+      <div class="btnmax">
+       <ons-button  class="btn-delete" ng-click="calcRoute()">
+               Enter a destination and click on me       
+            </ons-button>
+        </div>
     </ons-page>
