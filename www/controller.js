@@ -1,10 +1,19 @@
 
-	 var app = angular.module('app', ['onsen']);
-      
+	 var app = ons.bootstrap('app', ['onsen']);
+
 
 
           //Map controller
     app.controller('MapController', function($scope, $timeout){
+
+       ons.createPopover('popover.html').then(function(popover) {
+        $scope.popover = popover;
+      });
+      
+      $scope.show = function(e) {
+        $scope.popover.show(e);
+      };
+
 
         
         var start=new google.maps.LatLng(12.9915, 80.2336);
@@ -81,9 +90,10 @@
     },100);
         //Directions api
         $scope.calcRoute=function () {
+            console.log("inside calc route");
             var end=document.getElementById('search').value;
             var request = {
-              origin:start,
+              origin:oat,
               destination:end,
               travelMode: google.maps.TravelMode.WALKING
           };

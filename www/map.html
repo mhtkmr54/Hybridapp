@@ -1,3 +1,5 @@
+
+
 <ons-page ng-controller="MapController">
       <ons-toolbar>
         <div class="left">
@@ -6,6 +8,9 @@
           </ons-toolbar-button>
         </div>
         <div class="center">IITM MAP</div>
+        <div class="right">
+           <span id="top-right" ng-click="show('#top-right')" class="toolbar-button--outline navigation-bar__line-height">Button</span>
+          </div>
       </ons-toolbar>
     
 
@@ -14,7 +19,16 @@
 
      <p class="par-search">
             <input type="search" id="search" class="search-input search-input-map">
+
+      
+
         </p>
+
+        <div class="popover-mask"></div>
+
+
+
+      
       
       <div class="btnmax">
        <ons-button  class="btn-delete" ng-click="calcRoute()">
