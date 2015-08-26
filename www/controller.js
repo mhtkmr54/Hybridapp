@@ -93,7 +93,7 @@
             console.log("inside calc route");
             var end=document.getElementById('search').value;
             var request = {
-              origin:oat,
+              origin:start,
               destination:end,
               travelMode: google.maps.TravelMode.WALKING
           };
