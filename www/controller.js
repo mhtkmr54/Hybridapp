@@ -5,6 +5,7 @@
 
           //Map controller
     app.controller('MapController', function($scope, $timeout){
+      
 
        ons.createPopover('popover.html').then(function(popover) {
         $scope.popover = popover;
@@ -13,9 +14,9 @@
       $scope.show = function(e) {
         $scope.popover.show(e);
       };
+     
+        $scope.formData = {};
 
-
-        
         var start=new google.maps.LatLng(12.9915, 80.2336);
         var directionsDisplay;
         var directionsService = new google.maps.DirectionsService();

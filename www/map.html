@@ -9,7 +9,7 @@
         </div>
         <div class="center">IITM MAP</div>
         <div class="right">
-           <span id="top-right" ng-click="show('#top-right')" class="toolbar-button--outline navigation-bar__line-height">Button</span>
+           <span id="top-right" ng-click="show('#top-right')" class="toolbar-button--outline navigation-bar__line-height">Details of locations</span>
           </div>
       </ons-toolbar>
     
@@ -18,10 +18,29 @@
 
 
      <p class="par-search">
-            <input type="search" id="search" class="search-input search-input-map">
+            <input type="hidden" id="search" value="{{ formData.destiny }}" class="search-input search-input-map">
         </p>
 
+     <div align = "center">
+ <div class="button-bar" style="width:280px;">
+  <div class="button-bar__item">
+    <input type="radio"  name="destiny" value="Central lecture Theater,IIT madras" ng-model="formData.destiny">
+    <button class="button-bar__button">CLT</button>
+  </div>
 
+  <div class="button-bar__item">
+    <input type="radio" name="destiny" value="Students Activity Centre,IIT madras" ng-model="formData.destiny">
+    <button class="button-bar__button">SAC</button>
+  </div>
+
+  <div class="button-bar__item">
+    <input type="radio" name="destiny" value="Open Air Theater,IIT madras" ng-model="formData.destiny">
+    <button class="button-bar__button">OAT</button>
+  </div>
+
+  
+</div>
+</div>
 
 
 
@@ -29,7 +48,7 @@
       
       <div class="btnmax">
        <ons-button  class="btn-delete" ng-click="calcRoute()">
-               Enter a destination and click on me       
-            </ons-button>
+              Confirm Location 
+                          </ons-button>
         </div>
     </ons-page>
