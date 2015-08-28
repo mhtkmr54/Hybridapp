@@ -5,6 +5,10 @@
 
           //Map controller
     app.controller('MapController', function($scope, $timeout){
+
+      ons.ready(function() {
+          console.log("My first requests")
+        });
       
 
        ons.createPopover('popover.html').then(function(popover) {
