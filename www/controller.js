@@ -95,7 +95,7 @@
             var end=document.getElementById('search').value;
             var request = {
               origin:start,
-              destination:end,
+              destination:new google.maps.LatLng(12.98899, 80.23361),
               travelMode: google.maps.TravelMode.WALKING
           };
           directionsService.route(request, function(response, status) {
