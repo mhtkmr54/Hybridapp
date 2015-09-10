@@ -97,16 +97,53 @@
         $scope.calcRoute=function () {
             console.log("inside calc route");
             var end=document.getElementById('search').value;
-            var request = {
-              origin:start,
-              destination:new google.maps.LatLng(12.98899, 80.23361),
-              travelMode: google.maps.TravelMode.WALKING
-          };
-          directionsService.route(request, function(response, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-              directionsDisplay.setDirections(response);
-          }
-      });
+
+            if (end == "Open Air Theater,IIT madras"){
+          
+                  var request = {
+                    origin:start,
+                    destination:new google.maps.LatLng(12.98899, 80.23361),
+                    travelMode: google.maps.TravelMode.WALKING
+                };
+                directionsService.route(request, function(response, status) {
+                  if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                }
+               });
+              }
+
+
+            else if (end == "Students Activity Centre,IIT madras"){
+
+                   var request = {
+                    origin:start,
+                    destination:new google.maps.LatLng(12.98934, 80.23781),
+                    travelMode: google.maps.TravelMode.WALKING
+                };
+                directionsService.route(request, function(response, status) {
+                  if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                }
+               });
+
+
+
+            }
+
+            else if (end == "Central lecture Theater,IIT madras"){
+
+               var request = {
+                    origin:start,
+                    destination:new google.maps.LatLng(12.98955 , 80.23189),
+                    travelMode: google.maps.TravelMode.WALKING
+                };
+                directionsService.route(request, function(response, status) {
+                  if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                }
+               });
+
+            }
       } 
   
 });
